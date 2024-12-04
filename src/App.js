@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Login from "./components/Login";
 import Register from "./components/Register";
 import SecuredComponent from "./components/SecuredComponent";
-
+import Footer from "./components/Footer"
+import "./App.css";
 // Regular Dashboard Components
 import RegularDashboard from "./components/RegularDashboard/RegularSidebar";
 import RegularHome from "./components/RegularDashboard/RegularHome";
@@ -16,17 +17,19 @@ import AdminHome from "./components/AdminDashboard/AdminHome";
 import EmployeeManagement from "./components/AdminDashboard/EmployeeManagement";
 import AssetManagement from "./components/AdminDashboard/AssetManagement";
 import AssetRequests from "./components/AdminDashboard/AssetRequest";
-
+import EmployeeCRUD from "./services/employeeCrud";
 const App = () => {
   return (
-    <Router>
+    <div className="app-background" >
+      <Router>
       <Routes>
         {/* Redirect '/' to '/login' */}
         <Route path="/" element={<Navigate to="/login" />} />
 
         {/* Login and Register Routes */}
-        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+       
 
         {/* Secured Component Route */}
         <Route path="/secured" element={<SecuredComponent />} />
@@ -47,6 +50,8 @@ const App = () => {
         </Route>
       </Routes>
     </Router>
+
+    </div>
   );
 };
 

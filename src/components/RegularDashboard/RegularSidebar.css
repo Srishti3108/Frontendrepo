@@ -1,0 +1,11 @@
+
+.app-background1 {
+    background-image: url('C:\Users\Srishti Seth\Documents\AssetManagementSystem_frontend\assetmanagementsystem\src\Assets\Backgroundimage4.jpg'); /* Use the correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+  }
+  

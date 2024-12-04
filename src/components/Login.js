@@ -17,7 +17,7 @@ const Login = () => {
       });
       const { token } = response.data;
       localStorage.setItem("token", token); // Save JWT token for future requests
-      navigate("/dashboard"); // Navigate to dashboard after successful login
+      navigate("/admin"); // Navigate to dashboard after successful login
     } catch (err) {
       setError("Invalid username or password");
     }

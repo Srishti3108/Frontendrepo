@@ -18,6 +18,8 @@ const AdminSidebar = () => {
         <Link to="/admin/requests" className="nav-link text-white">
           Asset Requests
         </Link>
+        
+        <Link to ="/login" className="nav-link text-white">Logout</Link>
       </nav>
     </div>
   );

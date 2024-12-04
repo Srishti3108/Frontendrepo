@@ -15,7 +15,8 @@ const AdminHome = () => {
         setMetrics({
           employees: employeesRes.data.length,
           assets: assetsRes.data.length,
-          requests: requestsRes.data.filter(req => req.status === "Pending").length,
+          requests:requestsRes.data.length,
+          
         });
       } catch (error) {
         console.error("Error fetching metrics:", error);
