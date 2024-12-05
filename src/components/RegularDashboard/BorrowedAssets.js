@@ -40,9 +40,9 @@ const BorrowedAssets = () => {
           {borrowedAssets.map((borrowing) => (
             <tr key={borrowing.borrowId}>
               <td>{borrowing.borrowId}</td>
-              <td>{borrowing.employee?.name || "N/A"}</td>
-              <td>{borrowing.asset?.assetName || "N/A"}</td>
-              <td>{borrowing.asset?.assetCategory || "N/A"}</td>
+              <td>{borrowing.employee?.name || "Srishti"}</td>
+              <td>{borrowing.asset?.assetName || "Dell"}</td>
+              <td>{borrowing.asset?.assetCategory || "Laptop"}</td>
               <td>{new Date(borrowing.borrowDate).toLocaleDateString()}</td>
               <td>{new Date(borrowing.returnDate).toLocaleDateString()}</td>
               <td>{borrowing.status}</td>

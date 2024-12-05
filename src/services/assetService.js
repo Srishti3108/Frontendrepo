@@ -39,7 +39,7 @@ export const getAssetById = async (id) => {
 // Update asset
 export const updateAsset = async (asset) => {
   try {
-    const response = await axios.put(API_URL);  {/*`${API_URL}/${asset.assetId}`, asset);*/}
+    const response = await axios.put(API_URL,asset);  {/*`${API_URL}/${asset.assetId}`, asset);*/}
     return response.data;
   } catch (error) {
     console.error("There was an error updating the asset!", error);
@@ -50,7 +50,7 @@ export const updateAsset = async (asset) => {
 // Delete asset
 export const deleteAsset = async (id) => {
   try {
-    const response = await axios.delete(`${API_URL}/${id}`);
+    const response = await axios.delete(`${API_URL}?id=${id}`);
     return response.data;
   } catch (error) {
     console.error(`There was an error deleting the asset with id ${id}!`, error);

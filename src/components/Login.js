@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -17,7 +18,11 @@ const Login = () => {
       });
       const { token } = response.data;
       localStorage.setItem("token", token); // Save JWT token for future requests
-      navigate("/admin"); // Navigate to dashboard after successful login
+      if(role==="user")
+      navigate("/regular"); // Navigate to dashboard after successful login
+    else{
+      navigate("/admin");
+    }
     } catch (err) {
       setError("Invalid username or password");
     }
@@ -50,6 +55,18 @@ const Login = () => {
             required
           />
         </div>
+        <div className="form-group">
+                <label className="form-label">Role</label>
+                <select
+                  name="role"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                  className="form-control"
+                >
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
         <button type="submit" className="btn btn-primary mt-3">
           Login
         </button>

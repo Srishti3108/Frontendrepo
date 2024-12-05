@@ -5,23 +5,26 @@ import { Outlet } from "react-router-dom";
 
 const RegularSidebar = () => {
   return (
-    <div className="app-background1">
-      <h3 className="mb-4 text-center">User Dashboard</h3>
-      <nav className="nav flex-column">
-        <Link to="/regular/home" className="nav-link text-dark mb-3">
-          <i className="fas fa-home me-2"></i> Home
+    <div className="sidebar bg-dark text-white vh-100">
+      <nav className="nav flex-colnumn p-3">
+      <h4 className="mb-4">User Dashboard</h4>
+        <Link to="/regular/home" className="nav-link text-white">
+          Home
         </Link>
-        <Link to="/regular/assets" className="nav-link text-dark mb-3">
-          <i className="fas fa-cogs me-2"></i> Asset Catalog
+        <Link to="/regular/assets" className="nav-link text-white">
+           Asset Catalog
         </Link>
-        <Link to="/regular/borrowed" className="nav-link text-dark mb-3">
-          <i className="fas fa-box me-2"></i> Borrowed Assets
+        <Link to="/regular/borrowed" className="nav-link text-white">
+          Borrowed Assets
         </Link>
-        <Link to="/login" className="nav-link text-dark mb-3">
-          <i className="fas fa-sign-out-alt me-2"></i> Logout
+        <Link to="/regular/assetdashboard" className="nav-link text-white">
+          Asset Dashboard
+        </Link>
+        <Link to="/login" className="nav-link text-white">
+           Logout
         </Link>
       </nav>
-      <Outlet />
+      <Outlet/>
     </div>
   );
 };
