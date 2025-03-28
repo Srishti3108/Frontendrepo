@@ -8,7 +8,6 @@ const RegularDashboard = () => {
   return (
     <div className="d-flex">
       <RegularSidebar />
-     
       <div className="main-content p-4 w-100">
         <Outlet />
       </div>
